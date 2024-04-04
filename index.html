@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://accounts.google.com/gsi/client" async></script>
+
+
+</head>
+
+<body>
+
+
+    <div id="g_id_onload" data-client_id="457829767805-1h3e4m8go5rt41tt4v98ia1ljuptbcb7.apps.googleusercontent.com"
+        data-context="signin" data-ux_mode="popup" data-callback="onGoogleLogin" data-nonce="" data-auto_select="true"
+        data-itp_support="true">
+    </div>
+
+    <!-- <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="filled_blue"
+        data-text="signin_with" data-size="large" data-logo_alignment="left">
+    </div> -->
+
+    <div id="profile">
+        
+    </div>
+
+    <script src="https://unpkg.com/jose/dist/browser/jose.min.js"></script>
+
+    <script>
+        async function onGoogleLogin(response) {
+
+            function decodeGoogleJwt(jwtToken) {
+                const [, payloadBase64] = jwtToken.split('.');
+                const decodedPayload = JSON.parse(atob(payloadBase64));
+                return decodedPayload;
+            }
+
+            // Decode the Google JWT token
+            const decodedPayload = decodeGoogleJwt(response.credential);
+            console.log('Decoded Google JWT payload:', decodedPayload);
+
+            console.log(decodedPayload.picture)
+            console.log(decodedPayload.name)
+            console.log(decodedPayload.email)
+        }
+
+    </script>
+
+
+</body>
+
+</html>
