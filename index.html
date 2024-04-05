@@ -1,54 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html dir="ltr" data-cast-api-enabled="true">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <script src="https://accounts.google.com/gsi/client" async></script>
-
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" target="_blank" href="https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
 </head>
 
 <body>
-
-
-    <div id="g_id_onload" data-client_id="457829767805-1h3e4m8go5rt41tt4v98ia1ljuptbcb7.apps.googleusercontent.com"
-        data-context="signin" data-ux_mode="popup" data-callback="onGoogleLogin" data-nonce="" data-auto_select="true"
-        data-itp_support="true">
-    </div>
-
-    <!-- <div class="g_id_signin" data-type="standard" data-shape="rectangular" data-theme="filled_blue"
-        data-text="signin_with" data-size="large" data-logo_alignment="left">
-    </div> -->
-
-    <div id="profile">
-        
-    </div>
-
-    <script src="https://unpkg.com/jose/dist/browser/jose.min.js"></script>
-
-    <script>
-        async function onGoogleLogin(response) {
-
-            function decodeGoogleJwt(jwtToken) {
-                const [, payloadBase64] = jwtToken.split('.');
-                const decodedPayload = JSON.parse(atob(payloadBase64));
-                return decodedPayload;
-            }
-
-            // Decode the Google JWT token
-            const decodedPayload = decodeGoogleJwt(response.credential);
-            console.log('Decoded Google JWT payload:', decodedPayload);
-
-            console.log(decodedPayload.picture)
-            console.log(decodedPayload.name)
-            console.log(decodedPayload.email)
-        }
-
-    </script>
-
-
+    <h1>Data Structures and Algorithms</h1>
+    <table class="table table-bordered">
+        <tr>
+            <th>*</th>
+            <th>Problems</th>
+        </tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=odUc-u6KpxI">Leetcode 27 Remove Element - Top 150 Interview Question- Python</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=W8V3wP8hVV4">Leetcode 58 Length of Last Word - Top 150 Interview Question - Python</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=mv3t2WzBPIE">Leetcode 290 Word Pattern</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=1R7EcjJi5u0">Leetcode 205: Isomorphic Strings</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=pVtPcIW_nZ8">Leetcode 198: Huose Robber - Dynamic Programming - Memoization</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=hFJZmpTi3nk">Leetcode 11: Container with Most Water | Google/FB Interview Question |  Python</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=eJ7f9qvnHtY">Leetcode 167: Two Sum || - Input ayyay sorted - Two Pointers - Python</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=KOiRniQa5Sw">Leetcode 392: Is Subsequence</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=PRoYvjoORUs">Leetcode 102. Binary Tree Level Order Traversal - BFS - Python</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=XaqQv7ei3j8">Leetcode 5. Longest Palindromic Substring</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=SBEX0lNHBPA">Leetcode 133. Clone Graph</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=kASZDe1mqio">Leetcode 973. K Closest Points to Origin</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=nNjBGK8-SBU">Leetcode 53. Maximum Subarray -  Kadane's Algorithm - Python</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=wolEk5HdQrg">Leetcode 1: Two sum</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=xjLUuzT11vI">Leetcode 3. Longest Substring Without Repeating Characters - Two Pointer</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=8fFMWNFpNis">Leetcode 98: Validate BInary Search Tree - DFS - Python</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=q50yx4zQQiM">Leetcode 150. Evaluate Reverse Polish Notation</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=KnzqF_uxrYs">Leetcode 155. Min Stack</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=BlX4S1CttaM">Leetcode 844. Backspace String Compare</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=uZgF7aVebNU">108. Convert Sorted Array to Binary Search Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=bnSm-lCU0hk">Leetcode 572. Subtree of Another Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=JfxOZeIvOPc">Leetcode 9. Palindrome Number</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=O2YsQDp3ZzY">Leetcode 543. Diameter of Binary Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=ntMSKttYROA">Leetcode 190. Reverse Bits</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=5DDegSHoVQY">Leetcode 283. Move Zeroes</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=JHnElVfBBOQ">Leetcode 234. Palindrome Linked List</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=_MtTegkLsmo">Leetcode 104. Maximum Depth of Binary Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=rv40gWDgIdE">Leetcode 338. Counting Bits</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=DnNDXXgOyk4">Leetcode 14. Longest Common Prefix</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=DolE6CDJZDs">Leetcode 232. Implement Queue using Stacks</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=LX904U8o9u4">Leetcode 191. Number of 1 Bits</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=zb1HzoPxOqY">Leetcode 101 Symmetric Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=LWUiMYoBWus">Leetcode 136 Single Number</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=FmS6sk6j0Tg">Leetcode 100 Same Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=r6phE3m3T4o">Leetcode 70 Climbing Stairs</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=cbpu66AaKNM">Leetcode 876. Middle of the Linked List</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=eHIFWtxVEGk">Leetcode 206 Reverse Linked List (Part 1- iterative)</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=gILD-iAnRvo">Leetcode 206 Reverse Linked List - Part 2 - using recursion</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=vjuxN25OoL8">Leetcode 278: First Bad Version</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=7raDpJPOo_U">Leetcode 141 - Linked List Cycle - Floyd's Tortoise and Hare</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=wmeYT7rsB-M">110. Balanced Binary Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=mvOsFPmH3uY">2. বন্ধনী অবন্ধনী</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=-UDEqGkJnbQ">3. প্রতিলিপি অনুসন্ধান</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=W6Oo3tKSnxo">4. মিসির আলীর মিসিং নম্বর</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=oY2bZHQ4_6k">5. উল্টে যদি না পাল্টায় - প্যালিনড্রোম</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=na29OtrD8x0">Leetcode 242: Valid Anagram</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=6WUTtzcvF1I">Leetcode 21: Merge two sorted list</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=5zA4mrQEACk">LC 121: Best time to buy and sell stock</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=NLzNo0yPUdQ">Leetcode 242: Valid Anagram</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=T-pWCmKGSNQ">Leetcode 704: Binary Search</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=E_TOX6SKdcg">Leetcode 13: Roman to Integer</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=Yk5-Ai8SoD0">Leetcode 67: Add Binary</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=WvPm7_bJrB8">Leetcode 169: Majority Element</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=mFFzEWl7yeU">Leetcode 383 Ransom Note</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=FyX4kWmCh4o">Leetcode 977: Squares of a Sorted Array</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=VVDGmDTFogI">104. Maximum Depth of Binary Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=aNCbyueCwcE">Leetcode 226 Invert Binary Tree</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=kJRe9pxGZds">Leetcode 235 Lowest common ancestor of a BST</a></td></tr>
+        <tr><td><input type="checkbox"></td><td><a target="_blank" href="https://youtube.com/watch?v=SvBnHap1i00">Leetcode 733 Flood Fill</a></td></tr>
+    </table>
 </body>
-
-</html>
