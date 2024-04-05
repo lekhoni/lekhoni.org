@@ -5,10 +5,10 @@ playlist_url="https://www.youtube.com/playlist?list=PLXtLayAgF28r-c1X6i9BSTVLV7U
 playlist= Playlist(playlist_url)
 
 #for video in p.videos:
-template = "<tr><td><input type=\"checkbox\"></td><td><a target=\"_blank\" href=\"{1}\">{0}</a></td></tr>"
+template = "<tr><td><input type=\"checkbox\"></td><td><img src=\"{2}\" /></td><td><a target=\"_blank\" href=\"{1}\">{0}</a></td></tr>"
 
 for v in playlist.videos:
-    print(template.format(v.title, v.watch_url))
+    print(template.format(v.title, v.watch_url, v.thumbnail_url))
 
 
 """
