@@ -3,32 +3,23 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
+import l1dsaPlayList from './data/l1dsa.json';
+
 function App() {
-  const [count, setCount] = useState(0)
+
+  const listItems = l1dsaPlayList.map(v => <tr key={v.watch_url}><td><input type="checkbox" /></td><td><img width="80" height="45" src={v.thumbnail_url} /></td><td><a target="_blank" href={v.watch_url}>{v.title}</a></td></tr>);
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
+    <main>
+    <div className="container marketing">
+    <h1>Data Structures and Algorithms</h1>
+    Following lists level 1 problem solutions.
+    <table className="table table-bordered">
+        {listItems}
+    </table>
+    </div>
+    </main>
+
   )
 }
 
